@@ -1,6 +1,9 @@
 {
   "name": "code-shop-pro-server",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=14 <15"
+  },
   "type": "module",
   "description": "A MERN Shopping Cart App",
   "main": "server.js",
