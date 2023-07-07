@@ -117,7 +117,7 @@ export const logoutUser = asyncHandler(async (req, res, next) => {
 
   res.cookie("codeShopToken", null, {
     httpOnly: true,
-    sameSite: "strict",
+    sameSite:  process.env.NODE_ENV === 'development' ? 'lax' : 'none',
     secure: process.env.NODE_ENV !== "development",
     expires: new Date(Date.now()),
   });
